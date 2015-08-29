@@ -11,6 +11,7 @@ describe 'Ruby Enumerable Homework' do
   it 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
     expect(n).to eq ['omar', 'idris', 'angela']
+
   end
 
   it 'remove_nils_from_array' do
