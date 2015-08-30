@@ -158,7 +158,7 @@ def remove_capital_letters_from_string(string)
   string.gsub(/\p{Upper}/, '')
 end
 
-# round up a float up and convert it to an Integer, #26
+# round up a float up and convert it to an Integer, 
 # so 3.214 becomes 4
 def round_up_number(float)
   float.ceil.to_i
@@ -188,20 +188,21 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-
+  stop_words = %w{a an and the or for of}
+  string.split.each_with_index.map{|word, index| stop_words.include?(word) && index > 0 ? word : word.capitalize }.join(" ")
 end
 
 # return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-  
+  /\W/ === string
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
-  
+  range.max 
 end
 
 # should return true for a 3 dot range like 1...20, false for a 
