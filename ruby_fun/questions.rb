@@ -179,7 +179,7 @@ end
 # get the domain name *without* the .ly (or .com, .co etc) part, from an email address
 # so jeremy@generalassemb.ly becomes generalassemb.ly
 def get_domain_name_from_email_address(email)
-  
+  email.split('@').last
 end
 
 # capitalize the first letter in each word of a string, 
